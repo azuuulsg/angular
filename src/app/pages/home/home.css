@@ -1,0 +1,31 @@
+#titulo{
+    font-size: 60px;
+    text-align: center;
+    color:rgb(0, 0, 0)
+}
+
+.card{
+    margin-top: srem;
+    gap: 40px;
+}
+
+/*boton lo llamamos por clase*/
+
+.btn-action{
+    background-color: rgb(228, 109, 168);
+    color: rgb(0, 0, 0);
+
+}
+
+body{
+    background-color: rgb(5, 226, 152);
+}
+
+.cuerpo{
+    display: flex;
+    gap:30px;
+}
+
+.elemento-img-top{
+    height: 19rem;
+}
