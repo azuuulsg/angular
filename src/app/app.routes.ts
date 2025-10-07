@@ -7,7 +7,7 @@ import { Contact } from './pages/contact/contact';
 export const routes: Routes = [
     /*definimos rutas general o raiz en especifico*/
     {
-        path: "**", component: Home
+        path: "", component: Home
     },
     { path: "home", component: Home },
     { path: "about", component: About },
