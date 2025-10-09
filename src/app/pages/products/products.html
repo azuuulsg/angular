@@ -17,7 +17,7 @@
     <div class="row">
         <!--el ngfor es una directiva que permite iterar coleccones/ arreglos funcionalidad
         similar añ for, foreach -->
-        <div *ngFor="let i of infoTarjeta" class="col-3">
+        <div *ngFor="let i of infoTarjeta" class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
             <div class="card">
                 <img src="{{i.img}}" class="" alt="{{i.alt}}">
                 <div class="card-body">
@@ -27,15 +27,18 @@
                     <h5 class="card-title">{{ i.titulo }}</h5>
                     <p class="card-text"> {{ i.descripcion }} - {{i.anualPublicacion}}</p>
 
-                    <a href="#" class="btn btn-action">ver mas</a>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verMasinfo"
+                        (click)="verMasinfo(i)">
+
+                        ver mas
+                    </button>
+
                 </div>
             </div>
 
-
-
         </div>
 
-       <!-- <div class="lg:col-6 md:col-12 sm:col-12 col-6">
+        <!-- <div class="lg:col-6 md:col-12 sm:col-12 col-6">
 
             <div class="card">
                 <img src="../../../assets/dalia_01-flickr-Waldemar_Jan-768x480.jpg" class="" alt="...">
@@ -49,5 +52,30 @@
             </div>
         </div>-->
 
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="verMasinfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-imagen">
+                    <img src="{{tarjetaSeleccionada?.img}}" alt="{{tarjetaSeleccionada?.alt}}">
+                </div>
+
+                <div class="modal-descripcion">
+                    {{ tarjetaSeleccionada?.descripcion}}
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
     </div>
 </div>

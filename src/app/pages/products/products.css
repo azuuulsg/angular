@@ -13,7 +13,8 @@ img{
 
 @media (min-width: 751px){
 .card {
-    width: 16rem;
+    width: 100%;
+    height: 100%;
 }
 
 .title{
@@ -24,9 +25,14 @@ img{
 
 @media(max-width: 750px){
     .card{
-        width: 9rem
+        width: 100%;
     }
  .title{
     color: green;
  }
+}
+
+.btn-action{
+    background-color:rgb(255, 199, 208) ;
+    color:black;
 }
