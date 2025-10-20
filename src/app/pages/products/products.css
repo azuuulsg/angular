@@ -2,15 +2,18 @@
     display: flex;
     justify-content: center;
 
+    /*1rem = 16px*/
     padding: 1rem;
 }
 
 img{
     height: 8rem;
 
+    /*propiedad para ajustar tamaño al contenido y mantener calidad*/
     object-fit: cover;
 }
 
+/*pantalla de computadora*/
 @media (min-width: 751px){
 .card {
     width: 100%;
@@ -23,6 +26,7 @@ img{
 
 }
 
+/*pantalla de celular*/
 @media(max-width: 750px){
     .card{
         width: 100%;
@@ -36,3 +40,4 @@ img{
     background-color:rgb(255, 199, 208) ;
     color:black;
 }
+

@@ -29,3 +29,11 @@ body{
 .elemento-img-top{
     height: 19rem;
 }
+
+
+.carrusel{
+    height: 90rem;
+    width: 80px;
+
+  object-fit: cover;
+}
