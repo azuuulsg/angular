@@ -24,6 +24,7 @@ body{
 .cuerpo{
     display: flex;
     gap:30px;
+    margin-top: 55px;
 }
 
 .elemento-img-top{
@@ -32,8 +33,9 @@ body{
 
 
 .carrusel{
-    height: 90rem;
+    height: 9c0rem;
     width: 80px;
+    margin-bottom: 35px;
 
   object-fit: cover;
 }
