@@ -4,6 +4,7 @@ import { About } from './pages/about/about';
 import { Products } from './pages/products/products';
 import { Contact } from './pages/contact/contact';
 
+
 export const routes: Routes = [
     /*definimos rutas general o raiz en especifico*/
     {
@@ -12,6 +13,7 @@ export const routes: Routes = [
     { path: "home", component: Home },
     { path: "about", component: About },
     { path: "products", component: Products },
-    { path: "contact", component: Contact }
+    { path: "contact", component: Contact },
+    
 
 ];

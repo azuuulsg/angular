@@ -39,3 +39,15 @@ body{
 
   object-fit: cover;
 }
+
+/*nuevo estilo para productos*/
+.productos{
+    /*texto en el centro*/
+    text-align: center;
+    
+    font-size: 40px;
+
+    /*separacion del titulo con el carrusel*/
+    margin-top: 40px;
+   
+}
