@@ -1,6 +1,6 @@
 <h1 id="titulo">floreria</h1>
 
-<div id="carrusel" class="carousel slide">
+<!--<div id="carrusel" class="carousel slide">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="../../../assets/Image  PM (1).jpg" class="d-block w-100" alt="...">
@@ -20,49 +20,105 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>
+</div>-->
 
 <h1 class="productos">Algunos de nuestros productos!!</h1>
 
-<div class="cuerpo">
-<div class="card" style="width: 18rem;">
-  <img src="../../../assets/centro-claveles-jaspeados-rosa-y-blanco.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Clavel rosa </h5>
-    <p class="card-text">El clavel o clavelina es una planta herbácea es considerada como flor del agua.</p>
-    <a href="#" class="btn btn-action">Agregar</a>
-  </div>
-</div>
+<div class="container">
+    <div class="row">
+        <!--el ngfor es una directiva que permite iterar coleccones/ arreglos funcionalidad
+        similar al for, foreach -->
+        <div *ngFor="let i of infofloreria" class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
+            <div class="card">
+                <img src="{{i.img}}" class="" alt="{{i.alt}}">
+                <div class="card-body">
 
-<div class="card" style="width: 18rem;">
-  <img src="../../../assets/Peonias.webp" class="card-img-top"  alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Peonias</h5>
-    <p class="card-text">La peonías son plantas con flores del género Paeonia,  Las peonías son nativas de Asia.</p>
-    <a href="#" class="btn btn-action">Agregar</a>
-  </div>
-</div>
+                    <!--interpoblacion que permite acceder a una propiedad 
+                    especifica del modelo-->
+                    <h5 class="card-title">{{ i.titulo }}</h5>
+                    <p class="card-text"> {{ i.descripcion }} - {{i.anualPublicacion}}</p>
 
-<div class="card" style="width: 18rem;">
-  <img src="../../../assets/ramo-de-12-tulipanes.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Tulipanes</h5>
-    <p class="card-text">Tulipa es un género de plantas perennes y bulbosas con un nombre común.</p>
-    <a href="#" class="btn btn-action">Agregar</a>
-  </div>
-</div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verMasinfo"
+                        (click)="verMasinfo(i)">
 
-<div class="card" style="width: 18rem;">
-  <img src="../../../assets/Arreglo_floral_con_rosas_y_nubecitas.png" class="card-img-top"  alt="...">
-  <div class="card-body">
-    <h5 class="card-title">rosas y nubes</h5>
-    <p class="card-text">flores con rosas y nubes.</p>
-    <a href="#" class="btn btn-action">Agregar</a>
-  </div>
+                        ver mas
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    
 </div>
 
 
+<div class="modal fade" id="verMasinfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-imagen">
+                    <img src="{{tarjetaSeleccionada?.img}}" alt="{{tarjetaSeleccionada?.alt}}">
+                </div>
+
+                <div class="modal-descripcion">
+                    {{ tarjetaSeleccionada?.descripcion}}
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="container">
+
+  <div class="cuerpo">
+    <div class="card" style="width: 18rem;">
+      <img src="../../../assets/floresss🩷.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Ramo con peluche </h5>
+        <p class="card-text">Ramo de Tulipanes con peluches incluidos.</p>
+        <a href="#" class="btn btn-action">Agregar</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img src="../../../assets/masetad (1).jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Maceta hello kitty</h5>
+        <p class="card-text">para darle mas color a tu hogar.</p>
+        <a href="#" class="btn btn-action">Agregar</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img src="../../../assets/ramo-de-12-tulipanes.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Ramo de Tulipanes</h5>
+        <p class="card-text">Ramo para regalar en ocacion especial.</p>
+        <a href="#" class="btn btn-action">Agregar</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img src="../../../assets/undefined.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">maceta decorativa</h5>
+        <p class="card-text">maceta para darle color a tu lugar de descanso.</p>
+        <a href="#" class="btn btn-action">Agregar</a>
+      </div>
+    </div>
+  </div>
 
 
-
+</div>-->
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Tarjeta } from '../../models/tarjeta';
 
 @Component({
@@ -8,13 +9,13 @@ import { Tarjeta } from '../../models/tarjeta';
   styleUrl: './home.css'
 })
 export class Home {
-public infofloreria: Tarjeta[];
+  public infofloreria: Tarjeta[];
 
   constructor() {
     this.infofloreria = [
       {
         id: "1T",
-        img: "../../../assets/flores.jpg",
+        img: "../../../assets/",
         alt: "tulipanes",
         titulo: "flores",
         descripcion: "variedad de flores",
@@ -49,13 +50,13 @@ public infofloreria: Tarjeta[];
       }
     ]
 
-    
+
   }
 
   tarjetaSeleccionada: any = null;
-    verMasinfo(tarjeta: any){
-      this.tarjetaSeleccionada = tarjeta;
-    }
+  verMasinfo(tarjeta: any) {
+    this.tarjetaSeleccionada = tarjeta;
+  }
 
 }
 

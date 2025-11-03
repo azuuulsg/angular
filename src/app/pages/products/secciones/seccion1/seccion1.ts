@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { producto} from '../../../../models/producto';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 
 
