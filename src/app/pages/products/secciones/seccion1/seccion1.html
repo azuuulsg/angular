@@ -1,23 +1,29 @@
 <div class="container">
     <h2>Nuevo producto</h2>
 
-    <form {formGroup}="">
+
+    <!-- inserta etiqueta "formgroup" para crear un formulario y la igualo a su nombre
+        [formGroup] -> directiva de fomularioa reactivos -->
+
+    <form [formGroup]="nuevoProducto" (ngSubmit)=""> <!--envia informacion-->
         <div class="mb-3">
             <label for="mombre" class="form-lablel">nombre</label>
-            <input id="nombre" type="text" class="form-control">
+
+            <!-- formColtrolName -> atributo que vincule con la informacion de mi propiedad -->
+            <input id="nombre" type="text" class="form-control" formControlName="nombre">
         </div>
 
         <div class="mb-3">
+            <label for="descripcion" class="form-label">descripcion</label>
+            <input id="descripcion" type="text" class="form-control" formControlName="descripcion">
 
         </div>
 
         <div class="mb-3">
             <label for="precio" class="form-label">precio</label>
-            <input id="precio" type="number" class="for">
+            <input id="precio" type="number" class="for" formControlName="precio">
         </div>
 
-        <div class="mb-3"></div>
-
-        <div class="mb-3"></div>
+        <button type="submit" class="btn btn-primary w-100" [disabled]=""> guardar</button> <!-- disabled-->
     </form>
 </div>

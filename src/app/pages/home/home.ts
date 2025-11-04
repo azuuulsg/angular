@@ -4,7 +4,7 @@ import { Tarjeta } from '../../models/tarjeta';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
@@ -15,11 +15,11 @@ export class Home {
     this.infofloreria = [
       {
         id: "1T",
-        img: "../../../assets/",
-        alt: "tulipanes",
-        titulo: "flores",
-        descripcion: "variedad de flores",
-        anualPublicacion: 2025
+        img: "../../../assets/masetad (1).jpg",
+        alt: "maceta",
+        titulo: "maceta decorada",
+        descripcion: "maceta para decorar tu hogar",
+        anualPublicacion: 2055
       },
 
       {

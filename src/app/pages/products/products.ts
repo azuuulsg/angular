@@ -19,7 +19,7 @@ export class Products {
   constructor() {
     this.infoTarjeta = [
       {
-        id: "1T",
+        id: "1",
         img: "../../../assets/flores.jpg",
         alt: "tulipanes",
         titulo: "flores",
