@@ -4,6 +4,9 @@ export interface Tarjeta {
     alt: string;
     titulo: string;
     descripcion: string;
+    precio?: number;
+    
+     
 
     anualPublicacion: number; 
 }

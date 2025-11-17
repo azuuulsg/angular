@@ -1,1 +1,62 @@
-<p>contact works!</p>
+<h1 class="seccioncontact">Seccion para nuevos productos</h1>
+
+<div class="contacto">
+    <img src="../../../assets/floreria.jpg" class="imagen" alt="...">
+</div>
+
+<div class="container">
+    <h2>Nuevo producto</h2>
+
+
+    <!-- inserta etiqueta "formgroup" para crear un formulario y la igualo a su nombre
+        [formGroup] -> directiva de fomularioa reactivos -->
+      <!--formgroup agrupa propiedades-->
+
+      <!--Un FormGroup es un contenedor que guarda y organiza todos los campos de un formulario.-->
+    <form [formGroup]="nuevoProducto" (ngSubmit)="crearProducto()"> <!--envia informacion-->
+        <div class="mb-3">
+            <label for="mombre" class="form-lablel">nombre</label>
+
+            <!-- formColtrolName -> atributo que vincule con la informacion de mi propiedad -->
+            <input id="nombre" type="text" class="form-control" formControlName="nombre">
+        </div>
+
+        <div class="mb-3">
+            <label for="descripcion" class="form-label">descripcion</label>
+            <input id="descripcion" type="text" class="form-control" formControlName="descripcion">
+
+        </div>
+
+        <div class="mb-3">
+            <label for="precio" class="form-label">precio</label>
+            <input id="precio" type="number" class="form-control" formControlName="precio">
+        </div>
+
+        <!-- disabled-->
+
+        <button type="submit" class="btn btn-primary w-100" [disabled]="!nuevoProducto.valid"> guardar</button>
+
+    </form>
+    <!--disabled: ocuiltar un elemento: condicion; si el formulario no es valido o no esta completo el boton se va a ocultar-->
+
+</div>
+<!--lista-->
+<!--ngfor recorre el arreglo-->
+<ul class="list-group" *ngFor="let i of coleccionProductos">
+  <li class="list-group-item">{{i.nombre}} - {{i.precio}}</li>
+
+</ul>
+
+
+
+
+
+
+<div class="web">
+    <!--footer para sitio web-->
+
+    <p>© 2025 Mi Sitio Web — Todos los derechos reservados.</p>
+    <p><a class="sitioweb" href="#">Política de privacidad</a> | <a class="sitioweb" href="#">Términos y
+            condiciones</a></p>
+
+</div>

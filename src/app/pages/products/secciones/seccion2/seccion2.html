@@ -1,1 +1,74 @@
-<p>seccion2 works!</p>
+<h1 class="seccionramos">Nuestros ramos!!</h1>
+
+<div class="container">
+
+    <div class="row">
+        <!--el ngfor es una directiva que permite iterar coleccones/ arreglos funcionalidad
+        similar al for, foreach -->
+        <div *ngFor="let i of infoTarjeta" class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
+            <div class="card">
+                <img src="{{i.img}}" class="" alt="{{i.alt}}">
+                <div class="card-body">
+
+
+                    <!--interpoblacion que permite acceder a una propiedad 
+                    especifica del modelo-->
+                    <h5 class="card-title">{{ i.titulo }}</h5>
+                    <p class="card-text"> {{ i.descripcion }} - {{i.anualPublicacion}}</p>
+
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verMasinfo"
+                        (click)="verMasinfo(i)">
+
+                        ver mas
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="verMasinfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Nuestro precio</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-imagen">
+                    <img src="{{tarjetaSeleccionada?.img}}" alt="{{tarjetaSeleccionada?.alt}}">
+                </div>
+                <div class="texto">
+                    <div class="modal-descripcion">
+                        {{ tarjetaSeleccionada?.descripcion}}
+                    </div>
+                    <div class="prize">
+                        ${{tarjetaSeleccionada?.precio}}
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--div para sitio web-->
+<div class="web">
+    <p>© 2025 Mi Sitio Web — Todos los derechos reservados.</p>
+    <p><a class="sitioweb" href="#">Política de privacidad</a> | <a class="sitioweb" href="#">Términos y condiciones</a>
+    </p>
+</div>

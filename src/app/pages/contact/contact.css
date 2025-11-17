@@ -1,0 +1,45 @@
+
+
+.imagen{
+     height: 15rem;
+
+    /*maneja el ancho*/
+    width: 100%;
+
+    /*calidad de la imagen*/
+    object-fit: cover;
+}
+
+.conctacto {
+    display: flex;
+    justify-content: center;
+   
+    object-fit: cover;
+}
+
+.web {
+    background-color: rgb(235, 127, 181);
+    color: black;
+    text-align: center;
+    padding: 20px 10px;
+    
+}
+
+
+.sitioweb {
+    color: black;
+    text-decoration: none;
+}
+
+.lineaseparacion{
+     font-size: 60px;
+    text-align: center;
+    color: rgb(0, 0, 0)
+
+}
+
+
+.seccioncontact{
+    text-align: center;
+    
+}

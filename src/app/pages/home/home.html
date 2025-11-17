@@ -1,124 +1,114 @@
-<h1 id="titulo">floreria</h1>
-
-<!--<div id="carrusel" class="carousel slide">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="../../../assets/Image  PM (1).jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="../../../assets/agua Image 2025-10-27 at 3.07.53 PM (3).jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="../../../assets/WhatsApp Image de rosas 2025-10-27 at 3.07.53 PM.jpg" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>-->
+<div class="containerimagen">
+  <img src="../../../assets/ChatGPT Image 11 nov 2025, 05_01_57 p.m..png" class="img" alt="...">
+</div>
 
 <h1 class="productos">Algunos de nuestros productos!!</h1>
 
+
 <div class="container">
-    <div class="row">
-        <!--el ngfor es una directiva que permite iterar coleccones/ arreglos funcionalidad
+  <div class="row">
+    <!--el ngfor es una directiva que permite iterar coleccones/ arreglos funcionalidad
         similar al for, foreach -->
-        <div *ngFor="let i of infofloreria" class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
-            <div class="card">
-                <img src="{{i.img}}" class="" alt="{{i.alt}}">
-                <div class="card-body">
 
-                    <!--interpoblacion que permite acceder a una propiedad 
-                    especifica del modelo-->
-                    <h5 class="card-title">{{ i.titulo }}</h5>
-                    <p class="card-text"> {{ i.descripcion }} - {{i.anualPublicacion}}</p>
+    <!--infofloreria es un arreglo(lista) que tengo en mi archivo ts
+        let i -> representa cada producto dentro de ese arreglo
 
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verMasinfo"
-                        (click)="verMasinfo(i)">
+        ej:
+        si infofloreria tiene 6 productos-> entonces se repetira 6 veces.
+        
+        -->
 
-                        ver mas
-                    </button>
+        <!---- *ngFor: repite esta tarjeta para cada elemento del array infofloreria; 'tar' es el objeto y 'i' su índice -->
+    <div *ngFor="let i of infofloreria" class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
+      <!--col-lg-3:
+      Pantallas grandes (PC)
+      Cada tarjeta ocupa 3 columnas de 12 →
+      significa que entran 4 tarjetas por fila
+      
+      col-md-6:
+      Pantallas medianas (tablets)
+      Cada tarjeta ocupa la mitad →
+      2 tarjetas por fila
 
-                </div>
-            </div>
+      col-sm-12:
+      Pantallas pequeñas (celulares normales)
+      Cada tarjeta ocupa todo el ancho →
+      1 tarjeta por fila
+      -->
+      <div class="card">
+        <img src="{{i.img}}" class="img-card" alt="{{i.alt}}">
+        <div class="card-body">
+
+
+          <!--interpoblacion que permite acceder a una propiedad 
+           especifica del modelo
+                    
+           Mostrar en pantalla lo que está dentro de cada objeto i-->
+          <h5 class="card-title">{{ i.titulo }}</h5>
+          <p class="card-text"> {{ i.descripcion }} - {{i.anualPublicacion}}</p>
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verMasinfo"
+            (click)="verMasinfo(i)">
+
+            ver mas info
+          </button>
 
         </div>
-
-    </div>
-
-    
-</div>
-
-
-<div class="modal fade" id="verMasinfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="modal-imagen">
-                    <img src="{{tarjetaSeleccionada?.img}}" alt="{{tarjetaSeleccionada?.alt}}">
-                </div>
-
-                <div class="modal-descripcion">
-                    {{ tarjetaSeleccionada?.descripcion}}
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--<div class="container">
-
-  <div class="cuerpo">
-    <div class="card" style="width: 18rem;">
-      <img src="../../../assets/floresss🩷.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Ramo con peluche </h5>
-        <p class="card-text">Ramo de Tulipanes con peluches incluidos.</p>
-        <a href="#" class="btn btn-action">Agregar</a>
       </div>
+
     </div>
 
-    <div class="card" style="width: 18rem;">
-      <img src="../../../assets/masetad (1).jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Maceta hello kitty</h5>
-        <p class="card-text">para darle mas color a tu hogar.</p>
-        <a href="#" class="btn btn-action">Agregar</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <img src="../../../assets/ramo-de-12-tulipanes.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Ramo de Tulipanes</h5>
-        <p class="card-text">Ramo para regalar en ocacion especial.</p>
-        <a href="#" class="btn btn-action">Agregar</a>
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <img src="../../../assets/undefined.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">maceta decorativa</h5>
-        <p class="card-text">maceta para darle color a tu lugar de descanso.</p>
-        <a href="#" class="btn btn-action">Agregar</a>
-      </div>
-    </div>
   </div>
 
 
-</div>-->
+</div>
 
+<!-- Modal que muestra la info de la tarjeta seleccionada -->
+<div class="modal fade" id="verMasinfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+       <!-- header del modal -->
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Nuestro precio</h1>
+         <!-- btn-close: botón que Bootstrap usa para cerrar -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- body del modal: se muestran las propiedades del objeto seleccionado -->
+      <div class="modal-body">
+        <div class="modal-imagen">
+          <img class="imagen" src="{{tarjetaSeleccionada?.img}}" alt="{{tarjetaSeleccionada?.alt}}">
+        </div>
+        <div class="texto">
+          <div class="modal-descripcion">
+            <!-- uso tarjetaseleccionada?.propiedad -> operator "?.": evita errores si está undefined -->
+            {{ tarjetaSeleccionada?.descripcion}}
+          </div>
+          <!--clase para poder colocar el precio en mas info-->
+          <div class="prize">
+            ${{tarjetaSeleccionada?.precio}}
+          </div>
+
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!--Div para web-->
+<div class="web">
+  <p>© 2025 Mi Sitio Web — Todos los derechos reservados.</p>
+  <p><a class="sitioweb" href="about">Conoce sobre nuestra pagina</a> | <a class="sitioweb" href="#">Términos y
+      condiciones</a>
+  </p>
+</div>

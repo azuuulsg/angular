@@ -1,29 +1,80 @@
+<h1 class="macetass">Nuestas macetas!</h1>
+
+
+
+
+
+
+
 <div class="container">
-    <h2>Nuevo producto</h2>
+
+    <div class="row">
+        <!--el ngfor es una directiva que permite iterar coleccones/ arreglos funcionalidad
+        similar al for, foreach -->
+        <div *ngFor="let i of infoTarjeta" class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
+            <div class="card">
+                <img src="{{i.img}}" class="" alt="{{i.alt}}">
+                <div class="card-body">
 
 
-    <!-- inserta etiqueta "formgroup" para crear un formulario y la igualo a su nombre
-        [formGroup] -> directiva de fomularioa reactivos -->
+                    <!--interpoblacion que permite acceder a una propiedad 
+                    especifica del modelo-->
+                    <h5 class="card-title">{{ i.titulo }}</h5>
+                    <p class="card-text"> {{ i.descripcion }} - {{i.anualPublicacion}}</p>
 
-    <form [formGroup]="nuevoProducto" (ngSubmit)=""> <!--envia informacion-->
-        <div class="mb-3">
-            <label for="mombre" class="form-lablel">nombre</label>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#verMasinfo"
+                        (click)="verMasinfo(i)">
 
-            <!-- formColtrolName -> atributo que vincule con la informacion de mi propiedad -->
-            <input id="nombre" type="text" class="form-control" formControlName="nombre">
+                        ver mas
+                    </button>
+
+                </div>
+            </div>
+
         </div>
 
-        <div class="mb-3">
-            <label for="descripcion" class="form-label">descripcion</label>
-            <input id="descripcion" type="text" class="form-control" formControlName="descripcion">
 
+
+    </div>
+
+
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="verMasinfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Nuestro precio</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-imagen">
+                    <img src="{{tarjetaSeleccionada?.img}}" alt="{{tarjetaSeleccionada?.alt}}">
+                </div>
+                <div class="texto">
+                    <div class="modal-descripcion">
+                        {{ tarjetaSeleccionada?.descripcion}}
+                    </div>
+                    <div class="prize">
+                        ${{tarjetaSeleccionada?.precio}}
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+            </div>
         </div>
+    </div>
+</div>
 
-        <div class="mb-3">
-            <label for="precio" class="form-label">precio</label>
-            <input id="precio" type="number" class="for" formControlName="precio">
-        </div>
 
-        <button type="submit" class="btn btn-primary w-100" [disabled]=""> guardar</button> <!-- disabled-->
-    </form>
+<!--div para sitio web-->
+<div class="web">
+    <p>© 2025 Mi Sitio Web — Todos los derechos reservados.</p>
+    <p><a class="sitioweb" href="#">Política de privacidad</a> | <a class="sitioweb" href="#">Términos y condiciones</a>
+    </p>
 </div>

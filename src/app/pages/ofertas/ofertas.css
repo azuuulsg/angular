@@ -1,0 +1,38 @@
+.oferta {
+  text-align: center;
+
+  font-size: 60px;
+}
+
+/*#carouselExample img {
+  height: 45rem;
+  width: 100%;
+
+  object-fit: cover;
+}
+*/
+
+.img-c {
+  width: 100%;
+  height: 38rem;
+  object-fit: cover;
+}
+
+.Ramosdecoracion{
+  text-align: center;
+  color: palevioletred;
+
+}
+
+
+.ramospeluches{
+  text-align: center;
+  color: palevioletred;
+
+}
+
+.macetas{
+  text-align: center;
+  color: palevioletred;
+
+}

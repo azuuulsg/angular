@@ -1,54 +1,116 @@
-#titulo{
-    font-size: 60px;
-    text-align: center;
-    color:rgb(0, 0, 0)
-}
 
-.card{
+
+/*lo utilice para la imagen de las tarjetas del home*/
+.img-card {
     margin-top: srem;
-    gap: 40px;
-}
-
-/*boton lo llamamos por clase*/
-
-.btn-action{
-    background-color: rgb(228, 109, 168);
-    color: rgb(0, 0, 0);
-
-}
-
-body{
-    background-color: rgb(5, 226, 152);
-}
-
-.cuerpo{
-    display: flex;
-    gap:30px;
-    margin-top: 55px;
-}
-
-.elemento-img-top{
-    height: 19rem;
+    height: 23rem;
 }
 
 
-.carrusel{
-    height: 9c0rem;
-    width: 80px;
-    margin-bottom: 35px;
 
-  object-fit: cover;
-}
-
-/*nuevo estilo para productos*/
-.productos{
+/*nuevo estilo para productos segundo titulo*/
+.productos {
     /*texto en el centro*/
     text-align: center;
-    
-    font-size: 40px;
 
     /*separacion del titulo con el carrusel*/
-    margin-top: 40px;
-   
+    margin-top: 35px;
+
 }
 
+/*img de portada */
+.containerimagen {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    object-fit: cover;
+}
+
+/*elemento para la imagen del home*/
+.img {
+    /*altura del contenido*/
+    height: 30rem;
+
+    /*maneja el ancho*/
+    width: 100%;
+
+    /*calidad de la imagen*/
+    object-fit: cover;
+}
+
+/*imagen de ver mas info*/
+.imagen {
+    height: 250px;
+    object-fit: cover;
+
+
+}
+
+
+
+/* decoraciones para web */
+.web {
+    background-color: rgb(235, 127, 181);
+    color: black;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+
+.sitioweb {
+    color: black;
+    text-decoration: none;
+}
+
+.lineaseparacion {
+    font-size: 60px;
+    text-align: center;
+    color: rgb(0, 0, 0)
+}
+
+
+/*el texto de ver mas info este centrado del lado derecho*/
+.modal-body {
+    display: flex;
+    align-items: center;
+}
+
+/*texto para la info de ver mas*/
+.texto {
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+
+
+/*tarjeta en movimiento
+
+
+transform cambia → se mueve hacia arriba
+box-shadow cambia → aparece sombra
+Como .card tiene transición:
+ esos dos cambios se animan durante 0.25 segundos.
+
+*/
+.card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+/*:hover
+Se activa cuando el mouse está sobre el elemento .card.
+
+transform: translateY(-5px);
+Mueve la tarjeta 5 píxeles hacia arriba.
+El valor negativo en Y significa “arriba”.
+
+
+box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+Le agrega una sombra más grande cuando el mouse pasa por arriba.
+*/
+.card:hover {
+    transform: translateY(-5px);
+    /* se mueve un poquito hacia arriba */
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    /* sombra suave */
+}

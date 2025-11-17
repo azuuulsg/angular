@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+    justify-content: center;
+
+    /*1rem = 16px*/
+    padding: 1rem;
+}
+
+img {
+    height: 20rem;
+
+    
+
+    /*propiedad para ajustar tamaño al contenido y mantener calidad*/
+    object-fit: cover;
+}
+
+/* decoraciones para web */
+.web {
+    background-color: rgb(235, 127, 181);
+    color: black;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+
+.sitioweb {
+    color: black;
+    text-decoration: none;
+}
+
+.lineaseparacion {
+    font-size: 60px;
+    text-align: center;
+    color: rgb(0, 0, 0)
+}
+
+.ramos {
+    text-align: center;
+}
+
+#carouselExample img {
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/*informacion de las tarjetas -> ver mas*/
+.modal-body {
+    display: flex;
+    align-items: center;
+}
+
+.texto {
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+
+
+.card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* se mueve un poquito hacia arriba */
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    /* sombra suave */
+}
