@@ -10,3 +10,5 @@ export interface Tarjeta {
 
     anualPublicacion: number; 
 }
+
+//interfaz molde o plantillas que define como debe ser un objeto -> id, img...

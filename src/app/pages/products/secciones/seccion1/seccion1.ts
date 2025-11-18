@@ -15,6 +15,8 @@ export class Seccion1 {
 
 
   public infoTarjeta: Tarjeta[];
+  tarjetaSeleccionada: any = null;
+
 
   constructor() {
     this.infoTarjeta = [
@@ -73,7 +75,6 @@ export class Seccion1 {
 
   }
 
-  tarjetaSeleccionada: any = null;
   verMasinfo(tarjeta: any) {
     this.tarjetaSeleccionada = tarjeta;
   }
