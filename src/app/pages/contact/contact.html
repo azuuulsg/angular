@@ -12,6 +12,8 @@
         [formGroup] -> directiva de fomularioa reactivos -->
       <!--formgroup agrupa propiedades-->
 
+     <!--nuevoProducto es un FormGroup; su propiedad
+      valid es true cuando todos los controles cumplen sus Validators.-->
       <!--Un FormGroup es un contenedor que guarda y organiza todos los campos de un formulario.-->
     <form [formGroup]="nuevoProducto" (ngSubmit)="crearProducto()"> <!--envia informacion-->
         <div class="mb-3">
@@ -33,7 +35,8 @@
         </div>
 
         <!-- disabled-->
-
+            <!--submit": convierte el botón en el disparador del envío 
+            del formulario; al pulsarlo se activa-->
         <button type="submit" class="btn btn-primary w-100" [disabled]="!nuevoProducto.valid"> guardar</button>
 
     </form>

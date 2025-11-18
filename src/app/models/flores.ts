@@ -6,7 +6,7 @@ export interface Flores {
     alt?: string;
     nombre: string;
     precio: number;
-    descripcion: string;
+    descripcion?: string;
 }
 
 export interface indumendaria{

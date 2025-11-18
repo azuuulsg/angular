@@ -14,25 +14,33 @@
 
 .img-c {
   width: 100%;
-  height: 30rem;
+  height: 38rem;
   object-fit: cover;
 }
 
-.Ramosdecoracion{
+.titulos1{
   text-align: center;
   color: palevioletred;
 
 }
 
 
-.ramospeluches{
+.titulos2{
+  
+   text-align: center;
+  color: palevioletred;
+   margin-top: 36px;
+    margin-bottom: 36px;
+  
+}
+
+.titulos3{
   text-align: center;
   color: palevioletred;
 
-}
-
-.macetas{
-  text-align: center;
-  color: palevioletred;
+   margin-top: 36px;
+    margin-bottom: 36px;
 
 }
+
+
