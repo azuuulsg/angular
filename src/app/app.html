@@ -1,5 +1,7 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
+    <!--Mantiene todo ordenado -> FLUID
+     Hace que el contenido del menú se adapte a cualquier pantalla-->
     <a class="navbar-brand" href="#">azuGlow</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,15 +29,24 @@
 
         <!-- <li class="nav-item"><a class="nav-link" href="products">products</a> </li> -->
         <li class="nav-item dropdown">
+          <!--
+             Botón que abre el menú desplegable. 
+              data-bs-toggle="dropdown" activa el comportamiento del dropdown en Bootstrap
+             -->
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Productos
           </a>
+
+            <!-- 
+          Contenedor del menú desplegable -->
           <ul class="dropdown-menu">
+             <!-- Primer item del menú -->
             <li><a class="dropdown-item" href="products">Todos nuestro productos</a></li>
             <!--Lo utilice para separar los productos-->
             <li>
               <hr class="dropdown-divider">
             </li>
+             <!-- Más opciones dentro del dropdown -->
             <li><a class="dropdown-item" href="seccion1">Macetas</a></li>
             <li><a class="dropdown-item" href="seccion2">Ramos</a></li>
             <li><a class="dropdown-item" href="seccion3">Ramos con peluches</a></li>
